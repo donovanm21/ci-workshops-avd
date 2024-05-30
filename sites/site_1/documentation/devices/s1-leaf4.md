@@ -206,7 +206,7 @@ logging source-interface Management0
 
 | Domain-id | Local-interface | Peer-address | Peer-link |
 | --------- | --------------- | ------------ | --------- |
-| RACK2 | Vlan4094 | 10.1.253.0 | Port-Channel1 |
+| RACK2 | Vlan4094 | 10.1.253.4 | Port-Channel1 |
 
 Dual primary detection is disabled.
 
@@ -217,7 +217,7 @@ Dual primary detection is disabled.
 mlag configuration
    domain-id RACK2
    local-interface Vlan4094
-   peer-address 10.1.253.0
+   peer-address 10.1.253.4
    peer-link Port-Channel1
    reload-delay mlag 300
    reload-delay non-mlag 330
@@ -384,7 +384,7 @@ interface Port-Channel4
 
 | Interface | VRF | IP Address | IP Address Virtual | IP Router Virtual Address | VRRP | ACL In | ACL Out |
 | --------- | --- | ---------- | ------------------ | ------------------------- | ---- | ------ | ------- |
-| Vlan4094 |  default  |  10.1.253.1/31  |  -  |  -  |  -  |  -  |  -  |
+| Vlan4094 |  default  |  10.1.253.5/31  |  -  |  -  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
@@ -395,7 +395,7 @@ interface Vlan4094
    no shutdown
    mtu 1500
    no autostate
-   ip address 10.1.253.1/31
+   ip address 10.1.253.5/31
 ```
 
 ## Routing
